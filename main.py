@@ -18,6 +18,9 @@ def find_file():
             text += f"[{n}] {filename}\n"
             options[n] = filename
             
+        if not listdir:
+            text += "❌ No files in directory"
+            
         print(text)
         option = input('Enter a number corresponding to the options above or "stop" to stop: ')
         if option.lower() == 'stop':
