@@ -54,9 +54,11 @@ def main():
     f_path = find_file()
     cap = cv2.VideoCapture(f_path)
     frame_count = cap.get(cv2.CAP_PROP_FRAME_COUNT)
+    word_count = frame_count * 1000
     fps = cap.get(cv2.CAP_PROP_FPS)
     video_length = frame_count / fps
-    print(f"{frame_count=}, {fps=}, {video_length=}")
+    print(f'This video is worth {word_count:,} words')
+    # print(f"{frame_count=}, {fps=}, {video_length=}")
 
 
 if __name__ == '__main__':
